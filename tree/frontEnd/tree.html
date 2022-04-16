@@ -1,0 +1,62 @@
+<!--
+    Written By: Alireza Boroumandyar
+ First Written: 2022-03-18
+   Last Update: 2022-03-21
+
+   Html page for get tree information, and also provide 
+   tree infomration based on id 
+   we use jQuery and ajax
+   when use click on buttons, functions will call from script file
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tree.css">
+    <script src="jquery-3.6.0.js" defer></script>
+    <script src="tree.js" defer></script>
+    <title>Tree Information</title>
+</head>
+<body>
+    <h3>Tree Information System</h3>
+    <div>For create a tree put all information. use a number for type<br>
+    For search and delete a tree, providing the id is enough<br>
+    For update provide all information,  <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;enter id for old record that you want to update<br> </div>
+    <table>
+        <tr>
+            <td><label for="id">Tree id:</label></td>
+            <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+            <td><label for="name">Tree name:</label></td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Tree age:</label></td>
+            <td><input type="text" id="age"></td>
+        </tr>
+        <tr>
+            <td><label for="typeName">Tree Type:</label></td>
+            <td><input type="text" id="typeName"></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td><button onclick="addTree()">Save</button></td>
+            <td><button onclick="getTreeById()">Search</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="deleteTree()">Delete</button></td>
+            <td><button onclick="updateTree()">Update</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clearForm()">Clear Form</button></td>
+            <td><button onclick="getTrees()">Show All</button></td>
+        </tr>
+    </table>
+    <textarea id="area"></textarea>
+</body>
+</html>
